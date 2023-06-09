@@ -22,3 +22,17 @@ do
   true
 done
 ```
+## Read file
+
+```
+while IFS= read -r line
+do
+    echo "$line"
+done < file.txt
+```
+## Read end of a string
+
+```
+string="blabla"
+sub-string=${string:3:0-1}${string:0-1}
+```

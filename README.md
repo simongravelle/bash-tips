@@ -36,3 +36,7 @@ done < file.txt
 string="blabla"
 sub-string=${string:3:0-1}${string:0-1}
 ```
+
+## Interact with LAMMPS variable
+
+mpirun -np 16 lmp_mpi -in input.lammps -var f 0.01

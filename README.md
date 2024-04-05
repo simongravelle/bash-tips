@@ -40,3 +40,10 @@ sub-string=${string:3:0-1}${string:0-1}
 ## Interact with LAMMPS variable
 
 mpirun -np 16 lmp_mpi -in input.lammps -var f 0.01
+
+## Replace in a file
+
+newline='variable  = '$a
+oldline=$(cat myfile| grep 'variable  = ')
+sed -i '/'"$oldline"'/c\'"$newline" myfile
+

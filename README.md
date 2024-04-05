@@ -43,7 +43,8 @@ mpirun -np 16 lmp_mpi -in input.lammps -var f 0.01
 
 ## Replace in a file
 
-newline='variable  = '$a
-oldline=$(cat myfile| grep 'variable  = ')
+```
+newline='variable  = '$a  
+oldline=$(cat myfile| grep 'variable  = ')  
 sed -i '/'"$oldline"'/c\'"$newline" myfile
-
+```
